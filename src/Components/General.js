@@ -62,15 +62,17 @@ class General extends Component {
 
         return (
             <div id="General">
-                <h1>{name ? name: 'Your Name'}</h1>
-                <p className="title">{title ? title: 'Your Job Title'}</p>
-                <p className="phone-num">{phoneNum ? phoneNum: 'Your Number'}</p>
-                <p className="email">{email ? email : 'Your Email'}</p>
-                <p className="linked-in">{linkedin ? linkedin : 'Your LinkedIn Username'}</p>
-                <p className="location">{location ? location: 'Your City'}</p>
-                <button className="edit-toggle" type="button" onClick={this.toggleEdit}>
-                    Edit
-                </button>
+                <h1 className = "name">{name ? name: 'Your name'}</h1>
+                <p className="title">{title ? title: 'Your title'}</p>
+                <div className = "gen-info">
+                    <p className="phone-num">{phoneNum ? phoneNum: '555-555-5555'}</p>
+                    <p className="email">{email ? email : 'yourEmail@website.com'}</p>
+                    <p className="linked-in">{linkedin ? linkedin : 'Your LinkedIn Username'}</p>
+                    <p className="location">{location ? location: 'Your City'}</p>
+                    <button className="edit-toggle" type="button" onClick={this.toggleEdit}>
+                        Edit
+                    </button>
+                </div>
 
                 {edit &&
                     <form id="general-edit" className="edit-form">

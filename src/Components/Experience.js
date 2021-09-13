@@ -139,7 +139,7 @@ class Experience extends Component {
                         <input id="end-date" type="text" value={endDate} onChange={this.handleEndDateChange}/>
 
                         <label htmlFor="location">Location</label>
-                        <input id="location" type="text" value={location} onChange={this.handleCompanyChange}/>
+                        <input id="location" type="text" value={location} onChange={this.handleLocationChange}/>
 
                         <label htmlFor="desc">Description</label>
                         <input id="desc" type="text" value={desc} onChange={this.handleDescChange}/>
