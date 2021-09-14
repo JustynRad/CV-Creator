@@ -18,6 +18,13 @@ class Education extends Component {
                     degree: "B.S Computer Science",
                     date: "Sept 2021 - Present",
                     location: "San Diego, CA",
+                },
+                {
+                    id: uniqid(),
+                    school: "Test Community College",
+                    degree: "A.S Computer Science",
+                    date: "Sept 2019 - Sept 2021",
+                    location: "San Diego, CA",
                 }
             ],
             edit: false,
@@ -121,10 +128,10 @@ class Education extends Component {
                         <input id="degree" type="text" value={degree} onChange={this.handleDegreeChange}/>
 
                         <label htmlFor="start-date">Start Date</label>
-                        <input id="start-date" type="text" value={startDate} onChange={this.handleStartDateChange}/>
+                        <input id="start-date" type="text" placeholder="Month &amp; Year" value={startDate} onChange={this.handleStartDateChange}/>
 
                         <label hmtlFor="end-date">End Date</label>
-                        <input id="end-date" type="text" value={endDate} onChange={this.handleEndDateChange}/>
+                        <input id="end-date" type="text"  placeholder="Month &amp; Year" value={endDate} onChange={this.handleEndDateChange}/>
 
                         <label htmlFor="location">Location</label>
                         <input id="location" type="text" value={location} onChange={this.handleLocationChange}/>

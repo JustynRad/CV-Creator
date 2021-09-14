@@ -15,11 +15,19 @@ class Experience extends Component {
             experience: [
                 {
                     id: uniqid(),
-                    company: "New Grad Company",
+                    company: "New Grad Current Company",
                     title: "Full Stack Developer",
-                    date: "Aug 2017 - Present",
+                    date: "Aug 2020 - Present",
                     location: "San Diego, CA",
-                    desc: "A new grad working at the New Grad Company",
+                    desc: "Description of job at New Grad Current Company",
+                },
+                {
+                    id: uniqid(),
+                    company: "New Grad First Company",
+                    title: "Full Stack Developer",
+                    date: "Aug 2017 - Nov 2019",
+                    location: "San Diego, CA",
+                    desc: "Description of the job at New Grad First Company",
                 }
             ],
             edit: false
@@ -82,7 +90,7 @@ class Experience extends Component {
         this.setState({
             experience: this.state.experience.concat({
                 id: uniqid(),
-                company: this.state.compnany,
+                company: this.state.company,
                 title: this.state.title,
                 date: this.state.startDate + ' - ' + this.state.endDate,
                 location: this.state.location,
@@ -133,10 +141,10 @@ class Experience extends Component {
                         <input id="title" type="text" value={title} onChange={this.handleTitleChange}/>
 
                         <label htmlFor="start-date">Start Date</label>
-                        <input id="start-date" type="text" value={startDate} onChange={this.handleStartDateChange}/>
+                        <input id="start-date" type="text" placeholder="Month &amp; Year" value={startDate} onChange={this.handleStartDateChange}/>
 
                         <label htmlFor="end-date">End Date</label>
-                        <input id="end-date" type="text" value={endDate} onChange={this.handleEndDateChange}/>
+                        <input id="end-date" type="text" placeholder="Month &amp; Year" value={endDate} onChange={this.handleEndDateChange}/>
 
                         <label htmlFor="location">Location</label>
                         <input id="location" type="text" value={location} onChange={this.handleLocationChange}/>

@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-
+import React, { Component, Fragment } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileAlt, faEnvelope, faHome } from '@fortawesome/free-solid-svg-icons';
+import {  faLinkedin} from '@fortawesome/free-brands-svg-icons';
 class General extends Component {
     constructor() {
         super();
@@ -65,10 +67,10 @@ class General extends Component {
                 <h1 className = "name">{name ? name: 'Your name'}</h1>
                 <p className="title">{title ? title: 'Your title'}</p>
                 <div className = "gen-info">
-                    <p className="phone-num">{phoneNum ? phoneNum: '555-555-5555'}</p>
-                    <p className="email">{email ? email : 'yourEmail@website.com'}</p>
-                    <p className="linked-in">{linkedin ? linkedin : 'Your LinkedIn Username'}</p>
-                    <p className="location">{location ? location: 'Your City'}</p>
+                    <p className="phone-num">{phoneNum ? <Fragment><FontAwesomeIcon icon={faMobileAlt}/> {phoneNum}</Fragment>: <Fragment><FontAwesomeIcon icon={faMobileAlt}/> 555-555-5555</Fragment>}</p>
+                    <p className="email">{email ? <Fragment><FontAwesomeIcon icon={faEnvelope}/> {email}</Fragment> : <Fragment><FontAwesomeIcon icon={faEnvelope}/> yourEmail@website.com</Fragment>}</p>
+                    <p className="linked-in">{linkedin ? <Fragment><FontAwesomeIcon icon={faLinkedin}/> {linkedin}</Fragment> : <Fragment><FontAwesomeIcon icon={faLinkedin}/> Your LinkedIn Username </Fragment>}</p>
+                    <p className="location">{location ? <Fragment><FontAwesomeIcon icon={faHome}/> {location}</Fragment> : <Fragment><FontAwesomeIcon icon={faHome}/> Your City, State </Fragment>}</p>
                     <button className="edit-toggle" type="button" onClick={this.toggleEdit}>
                         Edit
                     </button>

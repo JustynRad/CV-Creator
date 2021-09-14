@@ -256,6 +256,7 @@ button {
     font-size: 20px;
     margin-bottom: 2px;
   }
+
 #App main #Experience .experience-location {
     font-style: italic;
     margin-bottom: 5px;
@@ -288,7 +289,8 @@ button {
 }
 
 #App main #Skills li {
-    margin-left: 10px;
+    margin-left: 15px;
+    font-size: 16px;
 }
 
 #App main #Skills .edit-toggle {
@@ -301,6 +303,7 @@ button {
 #App main #Skills:hover .edit-toggle {
     display: block;
   }
+
 .edit-form {
     position: absolute;
     top: 60px;
