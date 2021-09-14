@@ -115,7 +115,8 @@ class Experience extends Component {
                 <h2>Experience</h2>
                 {experience.map(exp => {
                     return (
-                        <div key={exp.id} onClick={() => this.handleRemove(exp.id)}>
+                        <div>
+                        {/* <div key={exp.id} onClick={() => this.handleRemove(exp.id)}> */}
                             <div>
                                 <p className="experience-date">{exp.date}</p>
                                 <p className="experience-title">{exp.title}</p>
@@ -125,9 +126,14 @@ class Experience extends Component {
                                 <p className="experience-location">{exp.location}</p>
                                 <p className="experience-desc">{exp.desc}</p>
                             </div>
+                            <button id="del-toggle" className="edit-toggle" key={exp.id} onClick={() => this.handleRemove(exp.id)}>
+                                Delete
+                            </button>
+                            
                         </div>
                     )
                 })}
+                
                 <button className="edit-toggle" type="button" onClick={this.toggleEdit}>
                     Add
                 </button>

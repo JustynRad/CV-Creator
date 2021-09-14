@@ -14,7 +14,7 @@ class Education extends Component {
             education: [
                 {
                     id: uniqid(),
-                    school: "Test Univesrity",
+                    school: "Test University",
                     degree: "B.S Computer Science",
                     date: "Sept 2021 - Present",
                     location: "San Diego, CA",
@@ -103,7 +103,8 @@ class Education extends Component {
                 <h2>Education</h2>
                 {education.map(edu => {
                     return(
-                        <div key={edu.id} onClick={() => this.handleRemove(edu.id)}>
+                        <div>
+                        {/* <div key={edu.id} onClick={() => this.handleRemove(edu.id)}> */}
                             <div>
                                 <p className="education-school">{edu.school}</p>
                                 <p className="education-degree">{edu.degree}</p>
@@ -112,9 +113,14 @@ class Education extends Component {
                                 <p className="education-location">{edu.location}</p>
                                 <p className="education-date">{edu.date}</p>
                             </div>
+                            <button id="del-toggle" className="edit-toggle" key={edu.id} onClick={() => this.handleRemove(edu.id)}>
+                                Delete
+                            </button>
                         </div>
                     )
                 })}
+
+
                 <button className="edit-toggle" type="button" onClick={this.toggleEdit}>
                     Add
                 </button>
@@ -145,6 +151,7 @@ class Education extends Component {
                         </button>
                     </form>
                 }
+
             </div>
         )
     }

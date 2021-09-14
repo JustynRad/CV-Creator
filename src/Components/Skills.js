@@ -70,7 +70,12 @@ class Skills extends Component {
                 <h2>Skills</h2>
                     {skills.map(skill => {
                         return(
-                            <li key={skill.id} onClick={() => this.handleRemove(skill.id)}>{skill.skill}</li>
+                            <div>
+                            <li>{skill.skill}</li>
+                            <button id="del-toggle" className="edit-toggle" key={skill.id} onClick={() => this.handleRemove(skill.id)}>
+                                Delete
+                            </button>
+                            </div>
                         )
                     })}
 

@@ -211,6 +211,10 @@ button {
     margin-right: 10px;
 }
 
+#App main #Education .education-delete {
+    margin-right: 100px;
+}
+
 #App main #Education .edit-toggle {
     display: none;
     position: absolute;
@@ -221,9 +225,19 @@ button {
 #App main #Education:hover .edit-toggle {
     display: block;
 }
+
+#App main #Education:hover #del-toggle {
+    display: inline;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    margin-right: 100px;
+    left: 780px;
+}
  
 #App main #Experience {
     position: relative;
+    min-height: 100px;
 }
 
 #App main #Experience > div {
@@ -273,8 +287,18 @@ button {
     display: block;
   }
 
+#App main #Experience:hover #del-toggle {
+    display: inline;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    margin-right: 100px;
+    left: 780px;
+}
+
 #App main #Skills {
     position: relative;
+    min-height: 100px;
 }
 
 #App main #Skills > div {
@@ -303,6 +327,16 @@ button {
 #App main #Skills:hover .edit-toggle {
     display: block;
   }
+
+#App main #Skills:hover #del-toggle {
+    display: inline;
+    position: relative;
+    margin-bottom: 50px;
+    margin-top: -50px;
+    margin-right: 300px;
+    margin-left: 300px;
+    right: 370px;
+}  
 
 .edit-form {
     position: absolute;
